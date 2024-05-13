@@ -38,6 +38,7 @@ public class EmailValidateServiceImpl implements EmailValidateService {
 			entity.setOTP(OTP);
 			entity.setOTPCreatedTime(LocalDateTime.now());
            System.out.println("+++++++++++++++++++"+entity);
+           System.out.println("+++++++++++++++++++"+entity);
 			EmailValidationEntity saveOTP = emailValidationRepository.save(entity);
 			if (saveOTP != null) {
 				// boolean sent = mailSending.sendEmailVerficationOTP(email, OTP);
