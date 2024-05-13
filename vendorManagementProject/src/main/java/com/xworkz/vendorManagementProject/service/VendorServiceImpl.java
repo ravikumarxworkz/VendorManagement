@@ -56,6 +56,7 @@ public class VendorServiceImpl implements VendorService {
 
 	   @Override
 	    public Set<ConstraintViolation<VendorDTO>> validateAndSaveVendorDTO(VendorDTO vendorDTO) {
+		   logger.info("validate and save dto is entering {}", vendorDTO);
 	        boolean checkEmailExistence = vendorRepository.existsByEmailId(vendorDTO.getEmailId());
 	        boolean checkContactNumberExistence = vendorRepository.existsByContactNumber(vendorDTO.getContactNumber());
 	        boolean checkWebsiteExistence = vendorRepository.existsByWebsite(vendorDTO.getWebsite());
