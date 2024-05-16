@@ -36,18 +36,21 @@ public class VendorController {
 
 	@GetMapping("/homePage")
 	public String homePage() {
+		logger.info("this calling homepage method");
 		return "index";
 
 	}
 
 	@GetMapping("/logInPage")
 	public String logInPage() {
+		logger.info("this calling logInPage method");
 		return "logIn";
 
 	}
 
 	@GetMapping("/registerPage")
 	public String registerPage() {
+		logger.info("this calling registerPage method");
 		return "register";
 
 	}
